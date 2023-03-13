@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj": {}
+    "C:\\Users\\Hardware 1\\source\\repos\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj": {
+    "C:\\Users\\Hardware 1\\source\\repos\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj",
+        "projectUniqueName": "C:\\Users\\Hardware 1\\source\\repos\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj",
         "projectName": "mini-telemetria",
-        "projectPath": "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj",
+        "projectPath": "C:\\Users\\Hardware 1\\source\\repos\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj",
         "packagesPath": "C:\\Users\\Hardware 1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\obj\\",
+        "outputPath": "C:\\Users\\Hardware 1\\source\\repos\\mini-telemetria\\mini-telemetria\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
