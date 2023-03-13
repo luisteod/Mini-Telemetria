@@ -1,0 +1,15 @@
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\bin\Debug\net6.0\mini-telemetria.exe
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\bin\Debug\net6.0\mini-telemetria.deps.json
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\bin\Debug\net6.0\mini-telemetria.runtimeconfig.json
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\bin\Debug\net6.0\mini-telemetria.dll
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\bin\Debug\net6.0\mini-telemetria.pdb
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.csproj.AssemblyReference.cache
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.AssemblyInfoInputs.cache
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.AssemblyInfo.cs
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.csproj.CoreCompileInputs.cache
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.dll
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\refint\mini-telemetria.dll
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.pdb
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\mini-telemetria.genruntimeconfig.cache
+C:\Users\Hardware 1\source\repos\vs\mini-telemetria\mini-telemetria\obj\Debug\net6.0\ref\mini-telemetria.dll
