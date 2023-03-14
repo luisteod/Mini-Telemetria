@@ -13,16 +13,42 @@ namespace mini_telemetria
     {
         public static void Main()
         {
-            int recv; // inteiro que indica a qntd de bytes da mensagem ah ser enviada
-            byte[] data = new byte[1024]; // cria um array de 1024 posicoes que informa a quantidade de bytes de uma msg em cada posicao
+            //inteiro que indica a qntd de bytes da mensagem recebida
+            int recv;
+            //cria um array de 1024 posicoes que informa a quantidade de bytes de uma msg em cada posicao
+            byte[] data = new byte[1024];
             IPEndPoint iped = new IPEndPoint(IPAddress.Any, 9050);
             Socket newsock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
-            newsock.Bind(iped); // liga o IP local(endpoint) com o socket
+            //liga o IP local(endpoint) com o socket
+            newsock.Bind(iped); 
             Console.WriteLine("Esperando pelo cliente");
 
+            //esperando qualquer IP e a porta deixa-se a cargo do systema (0) 
             IPEndPoint Sender = new IPEndPoint(IPAddress.Any, 0);
-            EndPoint Remote = (EndPoint)(Sender); // encontra o IP do emissor da msg
+            //guarda o IP do cliente
+            EndPoint Remote = (EndPoint)(Sender); 
+
+            //leitura da mensagem recebida pelo socket
+            recv = newsock.ReceiveFrom(data, ref Remote);
+            Console.WriteLine("Mensgem recebida de {0}:",Remote.ToString());
+            Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
+            
+            //envio de uma mensagem para o socket
+            string bnv = "bem vindo ao teste do meu servidor";
+            data = Encoding.ASCII.GetBytes(bnv);
+            newsock.SendTo(data,data.Length,SocketFlags.None, Remote);
+
+            while(true)
+            {
+                //variavel para guardar os bits recebidos pelo socket (buffer)
+                data = new byte[1024];
+                recv = newsock.ReceiveFrom(data, ref Remote);
+                
+                Console.WriteLine(Encoding.ASCII.GetString(data,0,recv));
+                newsock.SendTo(data, recv, SocketFlags.None, Remote);
+            }
+
 
 
         }
