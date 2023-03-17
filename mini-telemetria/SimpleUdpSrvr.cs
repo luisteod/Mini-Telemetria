@@ -11,13 +11,13 @@ namespace mini_telemetria
 {
     public class SimpleUdpSrvr
     {
-        public static void Main()
+        public static void Udp_Srvr()
         {
             //inteiro que indica a qntd de bytes da mensagem recebida
             int recv;
             //cria um array de 1024 posicoes que informa a quantidade de bytes de uma msg em cada posicao
             byte[] data = new byte[1024];
-            IPEndPoint iped = new IPEndPoint(IPAddress.Any, 9050);
+            IPEndPoint iped = new IPEndPoint(IPAddress.Any, 3333);
             Socket newsock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
             //liga o IP local(endpoint) com o socket
