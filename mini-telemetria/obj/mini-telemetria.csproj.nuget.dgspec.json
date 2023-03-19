@@ -1,37 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj": {}
+    "/home/luis/esp/projects/mini-telemetria/mini-telemetria/mini-telemetria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj": {
+    "/home/luis/esp/projects/mini-telemetria/mini-telemetria/mini-telemetria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj",
+        "projectUniqueName": "/home/luis/esp/projects/mini-telemetria/mini-telemetria/mini-telemetria.csproj",
         "projectName": "mini-telemetria",
-        "projectPath": "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj",
-        "packagesPath": "C:\\Users\\Hardware 1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\obj\\",
+        "projectPath": "/home/luis/esp/projects/mini-telemetria/mini-telemetria/mini-telemetria.csproj",
+        "packagesPath": "/home/luis/.nuget/packages/",
+        "outputPath": "/home/luis/esp/projects/mini-telemetria/mini-telemetria/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hardware 1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/luis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -60,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
