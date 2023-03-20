@@ -40,13 +40,14 @@ public class SimpleUdpSrvr
             */
 
             Console.WriteLine("Esperando pelo cliente");
-            // Leitura da mensagem recebida pelo socket
+
+            // function only pass foward if receives a message
             recv = newsock.ReceiveFrom(data, ref Remote);
 
             Console.WriteLine("Mensgem recebida de {0}:", Remote.ToString());
             Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
 
-            string vel = "velocidade";
+            string vel = Console.ReadLine();
             data = Encoding.ASCII.GetBytes(vel);
             newsock.SendTo(data, data.Length, SocketFlags.None, Remote);
 
@@ -57,6 +58,31 @@ public class SimpleUdpSrvr
             //newsock.SendTo(data, recv, SocketFlags.None, Remote);
         }
     }
+
+    /*
+    private byte[] value_variable()
+    {
+        Console.WriteLine("Escreva o campo que deseje alterar (max 5 caracteres):");
+        string xVar = Console.ReadLine();
+        byte[] xVar_by = new byte[5];
+        if (xVar_by.Length == Encoding.ASCII.GetBytes(xVar).Length)
+        { }
+        else
+            Console.Write("Tamanho do campo inválido");
+
+        Console.WriteLine("Escreva o valor do campo (max 2 caracteres):");
+        string xValue = Console.ReadLine();
+        byte[] xValue_by = new byte[2];
+        if (xValue_by.Length == Encoding.ASCII.GetBytes(xValue).Length)
+        { }
+        else
+            Console.Write("Tamanho do valor inválido");
+
+        byte[] valor = ;
+
+        return valor;
+    }
+    */
 
 
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+FY6pQx3jh/sAX5zslNY2fWw+cKKSeZNGuAWkzF4jWMyHeAjDL/FS/fjZh+ZpZPMvJQ6q8GEbiYDhp653bQP7Q==",
+  "dgSpecHash": "MMCdTO+U4jFsPi5OFzKHOM3SbnlWrNEty1j7p/Y+ExG1XpXrIJ2RRNZkns8RwMxGYVax5PTeMbiBHyC+sVwy9g==",
   "success": true,
-  "projectFilePath": "/home/luis/esp/projects/mini-telemetria/mini-telemetria/mini-telemetria.csproj",
+  "projectFilePath": "C:\\Users\\Hardware 1\\source\\repos\\vs\\mini-telemetria\\mini-telemetria\\mini-telemetria.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
