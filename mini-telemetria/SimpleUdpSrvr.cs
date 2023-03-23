@@ -17,6 +17,7 @@ public class SimpleUdpSrvr
         // Inteiro que indica a qntd de bytes da mensagem recebida
         int recv;
         byte[] data = new byte[128];
+        byte[] data_recv = new byte[128];
         IPEndPoint iped = new IPEndPoint(IPAddress.Any, 3333);
         Socket newsock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
         newsock.Bind(iped);
@@ -26,46 +27,51 @@ public class SimpleUdpSrvr
             IPEndPoint Sender = new IPEndPoint(IPAddress.Any, 0);
             EndPoint Remote = (EndPoint)(Sender);
 
-            /*
-            newsock.BeginReceive(data, 0, 1024, SocketFlags.None, new AsyncCallback(this.OnReceive), newsock)
-              private void OnReceive(IAsyncResult ar)
+          
+            while (true)
+            {
+                Console.WriteLine("Esperando pelo cliente");
+
+                // function only pass foward if receives a message
+                recv = newsock.ReceiveFrom(data_recv, ref Remote);
+                Console.WriteLine("Conectado com : " + Remote.ToString());
+                // manda de volta a mensagem enviada pelo cliente para confirmar a conexao
+                newsock.SendTo(data_recv, SocketFlags.None, Remote);
+
+                Console.WriteLine("Digite o que deseja : Escrever (A) ou Ler (B) ?");
+                string opt = Console.ReadLine();
+                
+                if (opt == "A")
                 {
-                    Socket s1 = (Socket)ar.AsyncState;
-                    int x = s1.EndReceive(ar);
-                    string message = System.Text.Encoding.ASCII.GetString(buffer, 0, x);
-                    Console.WriteLine(message);
-                    s1.BeginReceive(buffer, 0, 1024, SocketFlags.None, new AsyncCallback(this.OnReceive), s1);
-                }   
-            */
-
-            Console.WriteLine("Esperando pelo cliente");
-
-            // function only pass foward if receives a message
-            recv = newsock.ReceiveFrom(data, ref Remote);
-
-            Console.WriteLine("Mensgem recebida de {0}:", Remote.ToString());
-            Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
-
-            // Sending data
-            string opt = Console.ReadLine();
-            newsock.SendTo(Encoding.ASCII.GetBytes(opt),
-                               Encoding.ASCII.GetBytes(opt).Length,
-                               SocketFlags.None,
-                               Remote);
-            if (opt == "Escrever")
-            { 
-                SimpleUdpSrvr _data = new SimpleUdpSrvr();
-                _data.value_variable(ref data);
+                    SimpleUdpSrvr _data = new SimpleUdpSrvr();
+                    //escreve os dados a serem enviados no buffer
+                    _data.value_variable(ref data);
+                    //concatena a opcao com os dados 
+                    data = (Encoding.ASCII.GetBytes(opt)).Concat(data).ToArray();
+                   
+                }
+                else if (opt == "B")
+                {
+                    opt = "B0000";
+                    data = Encoding.ASCII.GetBytes(opt);
+              
+                }
+                else
+                {
+                    Console.WriteLine("Digite uma opcao valida");
+                    break;
+                }
+                
+                //envio do datagrama
                 newsock.SendTo(data,
-                           data.Length,
-                           SocketFlags.None,
-                           Remote);
+                              data.Length,
+                              SocketFlags.None,
+                              Remote);
+
+                data_recv = new byte[128];
+                recv = newsock.ReceiveFrom(data_recv, ref Remote);
+                Console.WriteLine(Encoding.ASCII.GetString(data_recv, 0, recv));
             }
-
-            data = new byte[128];
-            recv = newsock.ReceiveFrom(data, ref Remote);
-
-            Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
         }
     }
 
@@ -92,7 +98,7 @@ public class SimpleUdpSrvr
         xVar_by = Encoding.ASCII.GetBytes(xVar);
 
         /* Getting the value */
-        Console.WriteLine("Escreva o valor do campo (max 1 caracter):");
+                Console.WriteLine("Escreva o valor do campo (max 1 caracter):");
         string xValue = Console.ReadLine();
         byte[] xValue_by = new byte[1];
         do
@@ -121,3 +127,14 @@ public class SimpleUdpSrvr
 
 }
 
+/*
+           newsock.BeginReceive(data, 0, 1024, SocketFlags.None, new AsyncCallback(this.OnReceive), newsock)
+             private void OnReceive(IAsyncResult ar)
+               {
+                   Socket s1 = (Socket)ar.AsyncState;
+                   int x = s1.EndReceive(ar);
+                   string message = System.Text.Encoding.ASCII.GetString(buffer, 0, x);
+                   Console.WriteLine(message);
+                   s1.BeginReceive(buffer, 0, 1024, SocketFlags.None, new AsyncCallback(this.OnReceive), s1);
+               }   
+           */
